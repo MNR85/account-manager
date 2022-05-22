@@ -1,0 +1,14 @@
+version: "3"
+services:
+  account-manager:
+    image: repo.com/huma/account-manager:0.0.12
+    container_name: "account-manager"
+    environment:
+      - DB_USER=
+      - DB_PASS=
+      - MONGO_SERVER_ADDR=
+      - MONGO_SERVER_PORT=
+    expose:
+      - "5000"
+
+    command: npm run start
